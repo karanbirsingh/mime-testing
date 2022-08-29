@@ -15,5 +15,4 @@ jobs:
       uses: microsoft/accessibility-insights-action@v3
       with:
           static-site-dir: ${{ github.workspace }}/site
-          scan-timeout: 6000000
-          static-site-port: 12345
+          static-site-url-relative-path: /
