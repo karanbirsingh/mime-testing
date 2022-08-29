@@ -16,3 +16,9 @@ jobs:
       with:
           static-site-dir: ${{ github.workspace }}/site
           static-site-url-relative-path: /
+    - name: Upload report artifact
+      if: success() || failure()
+      uses: actions/upload-artifact@v3
+      with:
+          name: accessibility-reports
+          path: ${{ github.workspace }}/_accessibility-reports
